@@ -1,6 +1,9 @@
 package com.xct.wanandroid;
 
 import android.app.Application;
+import android.support.multidex.MultiDexApplication;
+
+import com.xct.core.app.Latte;
 
 /**
  * 项目名   : xct-WanAndroid
@@ -10,11 +13,16 @@ import android.app.Application;
  * 创建时间 :  2020/5/16 15:19
  * 描述     :  主 application
  */
-public class WanApplication extends Application {
+public class WanApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Latte.init(this)
+                .withLoaderDelayed(1000)
+                .withApiHost("")
+                .withJavascriptInterface("")
+                .configure();
 
 
     }

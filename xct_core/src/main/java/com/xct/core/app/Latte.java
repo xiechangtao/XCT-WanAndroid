@@ -38,5 +38,4 @@ public class Latte {
         return getConfiguration(ConfigKeys.HANDLER);
     }
 
-
 }
