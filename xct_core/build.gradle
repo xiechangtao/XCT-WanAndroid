@@ -73,6 +73,10 @@ dependencies {
     implementation 'org.greenrobot:greendao-generator:3.2.2'
     implementation 'org.greenrobot:greendao:3.2.2'
 
+
+    //工具包
+    implementation 'com.blankj:utilcode:1.7.1'
+
     //ButterKnife
     //noinspection GradleDependency
     implementation 'com.jakewharton:butterknife:8.4.0'
