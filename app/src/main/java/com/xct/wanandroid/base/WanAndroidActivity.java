@@ -3,6 +3,8 @@ package com.xct.wanandroid.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.xct.wanandroid.launcher.GuideDelegate;
+
 /**
  * 项目名   : xct-WanAndroid
  * 包名     : com.xct.wanandroid.base
@@ -20,6 +22,6 @@ public class WanAndroidActivity extends ProxyActivity {
 
     @Override
     public PrimaryDelegate setRootDelegate() {
-        return null;
+        return new GuideDelegate();
     }
 }

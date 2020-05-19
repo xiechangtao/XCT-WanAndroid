@@ -5,6 +5,8 @@ import android.support.multidex.MultiDexApplication;
 
 import com.xct.core.app.Latte;
 
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 /**
  * 项目名   : xct-WanAndroid
  * 包名     : com.xct.xct_wanandroid
@@ -24,6 +26,7 @@ public class WanApplication extends MultiDexApplication {
                 .withJavascriptInterface("")
                 .configure();
 
+        Logger.addLogAdapter(new AndroidLogAdapter()); // 初始化log
 
     }
 
