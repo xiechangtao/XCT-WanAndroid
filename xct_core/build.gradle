@@ -79,7 +79,7 @@ dependencies {
 
     //ButterKnife
     //noinspection GradleDependency
-    implementation 'com.jakewharton:butterknife:8.4.0'
+    api 'com.jakewharton:butterknife:8.4.0'
     //noinspection GradleDependency
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 
