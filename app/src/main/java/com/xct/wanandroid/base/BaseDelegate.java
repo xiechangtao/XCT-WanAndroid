@@ -80,6 +80,10 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
         return rootView;
     }
 
+    public final ProxyActivity getProxyActivity(){
+        return (ProxyActivity) _mActivity;
+    }
+
 
     @Override
     public void onResume() {

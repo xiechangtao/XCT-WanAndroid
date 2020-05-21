@@ -6,6 +6,8 @@ import android.view.View;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.xct.core.util.storage.SharePreUtils;
+import com.xct.wanandroid.Constant;
 import com.xct.wanandroid.R;
 import com.xct.wanandroid.base.PrimaryDelegate;
 import com.xct.wanandroid.launcher.banner.GuideViewHoldCreator;
@@ -38,14 +40,14 @@ public class GuideDelegate extends PrimaryDelegate implements OnItemClickListene
     }
 
 
-    private void initBanner(){
+    private void initBanner() {
         mImages.add(R.mipmap.launcher_01);
         mImages.add(R.mipmap.launcher_02);
         mImages.add(R.mipmap.launcher_03);
         mImages.add(R.mipmap.launcher_04);
         mImages.add(R.mipmap.launcher_05);
-        convenientBanner.setPages(new GuideViewHoldCreator(),mImages)
-                .setPageIndicator(new int[]{R.drawable.dot_normal,R.drawable.dot_focus})
+        convenientBanner.setPages(new GuideViewHoldCreator(), mImages)
+                .setPageIndicator(new int[]{R.drawable.dot_normal, R.drawable.dot_focus})
                 .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
                 .setOnItemClickListener(this)
                 .setCanLoop(false);
@@ -53,6 +55,9 @@ public class GuideDelegate extends PrimaryDelegate implements OnItemClickListene
 
     @Override
     public void onItemClick(int position) {
+        if (position == mImages.size() - 1){
+            SharePreUtils.setAppFlag(Constant.ISFIRSTLAUNCHER,true);
 
+        }
     }
 }

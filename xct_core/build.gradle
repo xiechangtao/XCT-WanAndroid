@@ -84,7 +84,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 
     // Before AndroidX
-    implementation ('com.github.niorgai:StatusBarCompat:2.1.4', {
+    api ('com.github.niorgai:StatusBarCompat:2.1.4', {
         exclude group: 'com.android.support'
     })
 

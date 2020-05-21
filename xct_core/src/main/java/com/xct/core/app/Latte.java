@@ -30,7 +30,7 @@ public class Latte {
         return getConfigurator().getConfiguration(key);
     }
 
-    public static Context getApplication() {
+    public static Context getApplicationContext() {
         return getConfiguration(ConfigKeys.APPLICATION_CONTEXT);
     }
 

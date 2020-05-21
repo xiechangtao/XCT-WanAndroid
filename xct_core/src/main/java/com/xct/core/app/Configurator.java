@@ -52,7 +52,7 @@ public final class Configurator {
     public final void configure() {
         initIcons();
         LATTE_CONFIGS.put(ConfigKeys.CONFIG_READY, true);
-        Utils.init(Latte.getApplication());
+        Utils.init(Latte.getApplicationContext());
     }
 
     private void initIcons() {

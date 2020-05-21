@@ -8,9 +8,7 @@ import android.support.v7.widget.ContentFrameLayout;
 
 import com.xct.wanandroid.R;
 
-import me.yokeyword.fragmentation.BuildConfig;
 import me.yokeyword.fragmentation.ExtraTransaction;
-import me.yokeyword.fragmentation.Fragmentation;
 import me.yokeyword.fragmentation.ISupportActivity;
 import me.yokeyword.fragmentation.SupportActivityDelegate;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
@@ -35,10 +33,6 @@ public abstract class ProxyActivity extends AppCompatActivity implements ISuppor
         super.onCreate(savedInstanceState);
         DELEGATE.onCreate(savedInstanceState);
         initContainer(savedInstanceState);
-        Fragmentation.builder()   // fragmentation 管理，悬浮窗管理fragment。
-                .stackViewMode(Fragmentation.BUBBLE)
-                .debug(BuildConfig.DEBUG)
-                .install();
     }
 
     private void initContainer(@Nullable Bundle savedInstanceState) {
@@ -46,7 +40,7 @@ public abstract class ProxyActivity extends AppCompatActivity implements ISuppor
         container.setId(R.id.delegate_container);
         setContentView(container);
         if (savedInstanceState == null) {
-            DELEGATE.loadRootFragment(R.id.delegate_container,setRootDelegate());
+            DELEGATE.loadRootFragment(R.id.delegate_container, setRootDelegate());
         }
 
     }
@@ -57,7 +51,7 @@ public abstract class ProxyActivity extends AppCompatActivity implements ISuppor
         super.onDestroy();
         DELEGATE.onDestroy();
         System.gc();
-
+        System.runFinalization();
     }
 
 
