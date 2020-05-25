@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBar;
 import com.xct.core.app.Latte;
 import com.xct.wanandroid.launcher.GuideDelegate;
 import com.xct.wanandroid.launcher.SplashDelegate;
+import com.xct.wanandroid.sign.LoginDelegate;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -34,6 +35,6 @@ public class WanAndroidActivity extends ProxyActivity {
 
     @Override
     public PrimaryDelegate setRootDelegate() {
-        return new SplashDelegate();
+        return new LoginDelegate();
     }
 }

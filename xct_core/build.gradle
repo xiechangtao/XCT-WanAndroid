@@ -74,6 +74,17 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
 
 
+    //图片处理
+    api 'com.github.bumptech.glide:glide:4.7.1'
+    api 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0@aar'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+
+
+
+    //Banner依赖
+    api 'com.bigkoo:convenientbanner:2.0.5'
+    api 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
     //工具包
     implementation 'com.blankj:utilcode:1.7.1'
 

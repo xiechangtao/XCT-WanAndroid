@@ -3,9 +3,9 @@ package com.xct.wanandroid.launcher.banner;
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.bigkoo.convenientbanner.holder.Holder;
+
 
 /**
  * 项目名   : xct-WanAndroid
