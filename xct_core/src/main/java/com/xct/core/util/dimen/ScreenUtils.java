@@ -1,4 +1,4 @@
-package com.xct.core.util;
+package com.xct.core.util.dimen;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;

@@ -8,7 +8,7 @@ import android.view.WindowManager;
 
 import com.wang.avi.AVLoadingIndicatorView;
 import com.xct.core.R;
-import com.xct.core.util.ScreenUtils;
+import com.xct.core.util.dimen.ScreenUtils;
 
 import java.util.ArrayList;
 
